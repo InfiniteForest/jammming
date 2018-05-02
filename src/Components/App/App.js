@@ -28,7 +28,7 @@ class App extends React.Component {
       }
     }
     if (!songInPlaylist) {
-      let newPlaylist = this.state.playlistTracks;
+      let newPlaylist = this.state.playlistTracks.concat();
       newPlaylist.push(track);
       this.setState({playlistTracks: newPlaylist});
     }

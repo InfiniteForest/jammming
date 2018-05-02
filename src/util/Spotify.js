@@ -2,7 +2,7 @@ let accessToken = '';
 let expiresIn='';
 const clientID = 'e79eb9474e6244748986b6b83db18d99';
 const redirectURI = 'https://serious-color.surge.sh';
-
+//const redirectURI = 'http://localhost:3000/';
 
 const Spotify = {
   getAccessToken() {
@@ -43,7 +43,9 @@ const Spotify = {
             name: track.name,
             artist: track.artists[0].name,
             album: track.album.name,
-            uri: track.uri
+            uri: track.uri,
+            art: track.album.images[2].url,
+            sample: track.preview_url
           }
         })
       } else {
